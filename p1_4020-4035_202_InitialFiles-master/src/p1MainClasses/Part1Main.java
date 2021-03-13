@@ -39,7 +39,6 @@ public class Part1Main {
 //		AbstractIntersectionFinder<E> p2 = new IntersectionFinder_P1P2<E>("p2");
 //		AbstractIntersectionFinder<E> p3 = new IntersectionFinder_P2<E>();
 //		AbstractIntersectionFinder<E> p4 = new IntersectionFinder_P3<E>();
-		
 		if (args.length > 1) {
 			System.out.println("Unexpected number of parameters. Must be <= 1.");
 			return;
