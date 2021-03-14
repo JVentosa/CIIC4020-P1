@@ -39,7 +39,7 @@ public class IntersectionFinder_P2<E> extends AbstractIntersectionFinder<E> {
 			if (i < allElements.size() && allElements.get(i).equals(e)) {
 				company++;
 			} else {
-				if (company == company) {
+				if (company == crime) {
 					finalCrimes.add((E) e);
 				}
 				e = allElements.get(i);

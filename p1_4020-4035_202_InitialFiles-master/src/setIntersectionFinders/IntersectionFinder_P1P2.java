@@ -21,7 +21,7 @@ public class IntersectionFinder_P1P2<E> extends AbstractIntersectionFinder<E> {
 
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public MySet<E>[] crimes(Integer[][][] rawData) {
+	public MySet<E>[] createSets(Integer[][][] rawData) {
 		company = rawData.length;
 		crimes = rawData[0].length;
 		Integer three, matrix;
