@@ -4,8 +4,8 @@ import interfaces.MySet;
 import mySetImplementations.Set2;
 import java.util.ArrayList;
 
-/**
- * @author Jose C. Ventosa Rodriguez - 802198619 CIIC4020 - 050L
+/*
+ * @author Jose C. Ventosa Rodriguez - 802198619 - CIIC4020 - 050L
  */
 
 public class IntersectionFinder_P2<E> extends AbstractIntersectionFinder<E> {
@@ -20,7 +20,7 @@ public class IntersectionFinder_P2<E> extends AbstractIntersectionFinder<E> {
 
 	@SuppressWarnings("unchecked")
 	public MySet<E> intersectSets(MySet<E>[] intersect) {
-		MySet<E> finalT = new Set2<E>();
+		MySet<E> finalCrimes = new Set2<E>();
 
 		int crime = intersect.length;
 
@@ -34,24 +34,23 @@ public class IntersectionFinder_P2<E> extends AbstractIntersectionFinder<E> {
 		allElements.sort(null);
 		Integer e = allElements.get(0);
 		int company = 1;
-		
+
 		for (int i = 1; i < allElements.size(); i++) {
 			if (i < allElements.size() && allElements.get(i).equals(e)) {
 				company++;
-			}
-			else {
+			} else {
 				if (company == company) {
-					finalT.add((E) e);
+					finalCrimes.add((E) e);
 				}
 				e = allElements.get(i);
 				company = 1;
 			}
 			if (company == crime) {
-				finalT.add((E) e);
+				finalCrimes.add((E) e);
 			}
 		}
 
-		return finalT;
+		return finalCrimes;
 	}
 
 }
