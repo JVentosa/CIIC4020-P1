@@ -50,7 +50,7 @@ public class IntersectionFinder_P1P2<E> extends AbstractIntersectionFinder<E> {
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public MySet<E> intersectSets(MySet<E>[] thecrimes) {
+	public MySet<E> intersectSets(MySet<E>[] intersect) {
 
 		MySet<E> finalCrimes;
 		if (this.getName() == "p1") {
@@ -59,17 +59,17 @@ public class IntersectionFinder_P1P2<E> extends AbstractIntersectionFinder<E> {
 			finalCrimes = new Set2<E>();
 		}
 
-		for (E e : thecrimes[0]) {
+		for (E e : intersect[0]) {
 			finalCrimes.add(e);
 
 		}
 
-		for (int i = 1; i < thecrimes.length; i++) {
+		for (int i = 1; i < intersect.length; i++) {
 			Iterator finalCrimesiterator = finalCrimes.iterator();
 			E e;
 			while (finalCrimesiterator.hasNext()) {
 				e = (E) finalCrimesiterator.next();
-				if (!thecrimes[i].contains(e)) {
+				if (!intersect[i].contains(e)) {
 
 					finalCrimesiterator.remove();
 				}
